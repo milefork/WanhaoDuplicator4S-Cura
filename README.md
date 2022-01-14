@@ -1,5 +1,11 @@
 # WanhaoDuplicator4S-Cura
 
+## Update
+Thanks Bradley for the initial config.
+Since I don't get it to work, I forked your project and edited the definitions on my own.
+
+Right now it is working with Cura 4.12 and X3GWriter 1.1.12 from the Marketplace on OSX.
+
 ## Intro
 Whoever created the profile for the Wanhao Duplicator 4S in Cura either had never seen one before or completely mixed up the files for another printer.  Most notably it did not contain the definition for a second extruder which meant you couldn't even attempt to use it in Cura.
 

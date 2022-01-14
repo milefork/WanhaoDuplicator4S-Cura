@@ -1,7 +1,7 @@
 {
     "id": "wanhao_d4s_extruder_0",
     "version": 2,
-    "name": "Extruder 1",
+    "name": "Extruder right",
     "inherits": "fdmextruder",
     "metadata": {
         "machine": "wanhao_d4s",
