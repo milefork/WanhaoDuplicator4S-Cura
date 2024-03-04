@@ -6,7 +6,7 @@
     "visible": true,
     "author": "milefork",
     "manufacturer": "Wanhao",
-    "file_formats": "application/x3g",
+    "file_formats": "application/x3g;text/x-gcode",
     "has_materials": true,
     "platform": "wanhao_225_145_platform.obj",
     "platform_texture": "Wanhaobackplate.png",
