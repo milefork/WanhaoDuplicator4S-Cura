@@ -47,10 +47,10 @@
       "default_value": "Makerbot"
     },
     "machine_start_gcode": {
-      "default_value": "M136 (enable build progress)\nG162 X Y F2000(home XY axes maximum)\nG161 Z F900(home Z axis minimum)\nG92 X0 Y0 Z-5 A0 B0 (set Z to -5)\nG1 Z0.0 F900(move Z to '0')\nG161 Z F100(home Z axis minimum)\nM132 X Y Z A B (Recall stored home offsets for XYZAB axis)\nG92 X152 Y75 Z0 A0 B0\nG1 X-112 Y-73 Z150 F3300.0 (move to waiting position)"
+      "default_value": "M140 S{material_bed_temperature_layer_0}     ; set bed temperature to e.g. 55 °C and continue\nM104 S{material_print_temperature_layer_0}   ; set hot end temperature to e.g. 210 °C and continue\nM190 S{material_bed_temperature_layer_0}     ; wait for bed temperature to reach e.g. 55 °C\nM104 S{material_print_temperature_layer_0}   ; wait for hot end temperature to reach e.g. 210 °C\nM104 S{material_print_temperature_layer_0}   ; wait for hot end temperature to reach e.g. 210 °C\nM116 ;Wait for all Temps to reach desired temp\nM136 (enable build progress)\nG162 X Y F2000(home XY axes maximum)\nG161 Z F900(home Z axis minimum)\nG92 X0 Y0 Z-5 A0 B0 (set Z to -5)\nG1 Z0.0 F900(move Z to '0')\nG161 Z F100(home Z axis minimum)\nM132 X Y Z A B (Recall stored home offsets for XYZAB axis)\nG92 X152 Y75 Z0 A0 B0\nG1 X-112 Y-73 Z150 F3300.0 (move to waiting position)"
     },
     "machine_end_gcode": {
-      "default_value": "M18 A B(Turn off A and B Steppers) \nG1 Z155 F900 \nG162 X Y F2000\nM18 X Y Z(Turn off steppers after a build)\nM109 S0 T0\nM104 S0 T0\nM70 P5 (We <3 Making Things!)\nM72 P1  ( Play Ta-Da song )\nM73 P100 (end  build progress )\nM137 (build end notification)"
+      "default_value": "G90 ;relative machine\nM83 ;relative extruder\nG1 E-8 F300 ; retrac filamnet 8mm\nG91 ;absolute machine\nM82 ;absolute extruder\nG1 Z155 F900 \nG162 X Y F2000\nM18 X Y Z(Turn off steppers after a build)\nM109 S0 T0\nM104 S0 T0\nM70 P5 (We <3 Making Things!)\nM72 P1  ( Play Ta-Da song )\nM73 P100 (end  build progress )\nM84 ;disable steppers\nM137 (build end notification)"
     }
   }
 }
